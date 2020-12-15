@@ -30,18 +30,33 @@ def callLink(LEDno,LEDstatus):
     data = reqs.get(createURL)
     success(str(data.status_code))
 
+def funcipreturn():
+    return str(ipstr)
+
+def funcurreturn():
+    return str(userstr)
+
+def funcpassreturn():
+    return str(passstr)
+
+empdict={"f1":funcipreturn(),"f2":str2,"f3":str3};
+
+
+
+
+##down town
 getIp=tk.Entry (screen)
 getName=tk.Entry (screen)
 getPasswd=tk.Entry (screen)
-AON=tk.Button(screen,text="ON",command=Switch_A_ON)
-BON=tk.Button(screen,text="ON",command=Switch_B_ON)
-AOFF=tk.Button(screen,text="OFF",command=Switch_A_OFF)
-BOFF=tk.Button(screen,text="OFF",command=Switch_B_OFF)
+AON=tk.Button(screen,text="ON  ",command=lambda:Switch_A_ON())
+BON=tk.Button(screen,text="ON  ",command=lambda:Switch_B_ON())
+AOFF=tk.Button(screen,text=" OFF",command=lambda:Switch_A_OFF())
+BOFF=tk.Button(screen,text=" OFF",command=lambda:Switch_B_OFF())
 headding=tk.Label(screen,text="Communication Through Wireless Mode",font=("Arial Bold", 20))
 switch1=tk.Label(screen,text="Switch 1",font=("Arial Bold", 15))
 switch2=tk.Label(screen,text="Switch 2",font=("Arial Bold", 15))
-status1=tk.Label(screen,text="Status: Off")
-status2=tk.Label(screen,text="Status: Off")
+status1=tk.Label(screen,text=" Status: Off")
+status2=tk.Label(screen,text=" Status: Off")
 ipstr=tk.Label(screen,text="Enter ip address:")
 userstr=tk.Label(screen,text="Enter UserName:")
 passstr=tk.Label(screen,text="Enter Password:")
