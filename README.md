@@ -1,3 +1,3 @@
 # Security System
 
-> IOT project for alert systems-NodeMcu,Pir etc..
+> IOT project for small scale alert syatem.
